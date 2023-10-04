@@ -5,7 +5,7 @@ const {
   getAllFilmsbyId,
   getAllCategories,
   getAllFilmsbyCategories,
-} = require("../services/films");
+} = require("../controllers/films");
 
 router.get("/", getAllFilms);
 
