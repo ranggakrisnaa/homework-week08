@@ -1,13 +1,49 @@
 const prisma = require("../config/database");
 
 const getAllFilms = async () => {
-  return await prisma.film.findMany();
+  return await prisma.film.findMany({
+    select: {
+      film_id: true,
+      title: true,
+      description: true,
+      release_year: true,
+      film_actor: {
+        select: {
+          actor: {
+            select: {
+              actor_id: true,
+              first_name: true,
+              last_name: true,
+            },
+          },
+        },
+      },
+    },
+  });
 };
 
 const getAllFilmsbyId = async (id) => {
-  const data = await prisma.film.findMany({ where: { film_id: Number(id) } });
+  const data = await prisma.film.findMany({
+    where: { film_id: Number(id) },
+    select: {
+      film_id: true,
+      title: true,
+      description: true,
+      release_year: true,
+      film_actor: {
+        select: {
+          actor: {
+            select: {
+              actor_id: true,
+              first_name: true,
+              last_name: true,
+            },
+          },
+        },
+      },
+    },
+  });
   if (data.length === 0) throw new Error("Data film not found");
-
   return data;
 };
 
