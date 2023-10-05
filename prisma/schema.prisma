@@ -11,8 +11,8 @@ model actor {
   actor_id    Int          @id @default(autoincrement())
   first_name  String       @db.VarChar(45)
   last_name   String       @db.VarChar(45)
-  age         Int?
   last_update DateTime     @default(now()) @db.Timestamp(6)
+  age         Int?
   film_actor  film_actor[]
 
   @@index([last_name], map: "idx_actor_last_name")
@@ -95,8 +95,8 @@ model film {
   film_actor       film_actor[]
   film_category    film_category[]
   inventory        inventory[]
-  language         language?       @relation(fields: [Language_id], references: [language_id])
-  Language_id      Int?
+  language         language?       @relation(fields: [language_id], references: [language_id])
+  language_id      Int?
 
   @@index([title], map: "idx_title")
 }
