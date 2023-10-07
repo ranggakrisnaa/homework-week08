@@ -10,7 +10,7 @@ const prisma = new PrismaClient();
 
 async function backupData() {
   try {
-    const data = await prisma.film.findMany(); // Replace 'yourModelName' with the actual model you want to backup.
+    const data = await prisma.film.findMany();
 
     fs.writeFile(
       "./prisma/data-json/film.json",
