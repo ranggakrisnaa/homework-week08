@@ -7,7 +7,7 @@ yang didapatkan dari sampel data [ini](https://github.com/fathy17/rakamin-expres
 ```
 ###
 ```markdowm
-3. Buatlah query untuk menampilkan data pada database sebagai berikut.
+2. Buatlah query untuk menampilkan data pada database sebagai berikut.
     - Menampilkan data seluruh list film
     - Menampilkan data film tertentu berdasarkan id
     - Menampilkan data list category
@@ -15,10 +15,10 @@ yang didapatkan dari sampel data [ini](https://github.com/fathy17/rakamin-expres
 ```
 ###
 ```markdown
-4. Implementasikan routing yang sesuai dan benar pada aplikasi yang teman-teman buat.
+3. Implementasikan routing yang sesuai dan benar pada aplikasi yang teman-teman buat.
 ```
 ###
 ```markdown
-5. Lakukan migrasi database dengan menambahkan column age pada tabel actor yang 
+4. Lakukan migrasi database dengan menambahkan column age pada tabel actor yang 
 tersedia
 ```
